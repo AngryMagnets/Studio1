@@ -7,9 +7,9 @@ public class GroundChecker : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject != ball.gameObject)
+        if (other.tag == "Ground")
         {
-            ball.grounded = true;
+            
         }
     }
 

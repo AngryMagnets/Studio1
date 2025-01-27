@@ -16,10 +16,16 @@ public class BallController : MonoBehaviour
     
     private void OnCollisionEnter(Collision collision)
     {
-        grounded = true;
+        if (collision.gameObject.tag == "Ground")
+        {
+            grounded = true;
+        }
     }
     private void OnCollisionExit(Collision collision) 
-    {      
-        grounded = false;
+    {
+        if (collision.gameObject.tag == "Ground")
+        {
+            grounded = false;
+        }
     }
 }
